@@ -26,4 +26,4 @@ use Mix.Config
 # They can, however, be easily imported as well:
 #
 #     import_config "../apps/foo/config/config.exs"
-#     import_config "../apps/bar/config/config.exs"
+import_config "../apps/kv/config/config.exs"
