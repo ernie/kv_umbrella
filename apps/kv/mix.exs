@@ -2,10 +2,14 @@ defmodule KV.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :kv,
-     version: "0.0.1",
-     elixir: "~> 0.14.0",
-     deps: deps]
+    [
+      app: :kv,
+      version: "0.0.1",
+      elixir: "~> 0.14.0",
+      deps: deps,
+      deps_path: "../../deps",
+      lockfile: "../../mix.lock"
+    ]
   end
 
   # Configuration for the OTP application

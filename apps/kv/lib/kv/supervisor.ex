@@ -15,6 +15,7 @@ defmodule KV.Supervisor do
                    [:set, :public, :named_table, {:read_concurrency, true}])
 
     children = [
+      supervisor(Task.Supervisor, [[name: KV.RouterTasks]]),
       worker(GenEvent, [[name: @manager_name]]),
       supervisor(KV.Bucket.Supervisor, [[name: @bucket_sup_name]]),
       worker(
